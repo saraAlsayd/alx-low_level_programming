@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-/*
- * create_array - size and assign char c.
- * @size: size of array
- * @c: char to assign
+/**
+ * create_array - a function that creates an arraybof char.
+ * @size: the size of the memory to print
+ * @c: a specific char 
  * Return: pointer to array, NULL if fail 
  *
- **/
+ */
 
 char *create_array(unsigned int size, char c)
 {
