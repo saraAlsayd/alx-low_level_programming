@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * print_listint - prints the elements of linked list.
@@ -9,17 +8,18 @@
  */
 size_t print_listint(const listint_t *h)
 {
-size_t *newnode;
-unsigned int n = 0;
-newnode = h;
+	size_t nodenew = 0;
 
-	while (h != 0)
-{
-printf("%d\n", newnode->n);
-n++;
-newnode = newnode->next;               
-}
-
-	return (n);
+	if (h == NULL)
+	{
+		return (nodenew);
+	}
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		nodenew++;
+	}
+	return (nodenew);
 }
 
