@@ -9,12 +9,19 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-unsigned long int valbit;
+unsigned int j;
 
-if (index > 63
-Return(-1);
+	if (n == 0 && index < 64)
+		return (0);
 
-valbit = (n >> index) & 1;
-Return(valbit);
+	for (j = 0; j <= 63; n >>= 1, j++)
+	{
+		if (index == j)
+		{
+			return (n & 1);
+		}
+	}
+
+	return (-1);
 }
 
